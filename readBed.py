@@ -90,5 +90,5 @@ def createEpigentics(dictionary, file, output):
 
 if __name__ == '__main__':
     dic = parseBed(".bed")  # input bed file name
-    createEpigentics(dic, "s1_data.csv", 'epi_file')  # gives as input file of gRNAs with efficiency values
+    createEpigentics(dic, "T_data.csv", 'epi_file')  # gives as input file of gRNAs with efficiency values
                                                                  # output to specific file name

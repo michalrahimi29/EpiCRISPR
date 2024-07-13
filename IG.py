@@ -2,7 +2,7 @@ import keras
 import logomaker
 import tensorflow as tf
 from matplotlib import pyplot as plt
-from CRISPRepi import *
+from EpiCRISPR import *
 
 """In this file we create the saliency map for feature importance"""
 
@@ -79,7 +79,7 @@ def save_logo(df):
 
 
 if __name__ == '__main__':
-    reconstructed_model = keras.models.load_model("CRISPRepi_model.keras")
+    reconstructed_model = keras.models.load_model("EpiCRISPR_model.keras")
     e = pd.read_csv('epigenetics/T/epigenetics_methylation.csv')
     methylation = e['epigenetics'].to_numpy()
     saliency_map(reconstructed_model, methylation)

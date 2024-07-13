@@ -1,5 +1,5 @@
 import os
-from CRISPRepi import *
+from EpiCRISPR import *
 import tensorflow as tf
 import random
 import sys
@@ -65,7 +65,7 @@ def save_trained_model(seqs_protospacer, seqs_pam, seqs_up, seqs_down, weights, 
     data = createTrainSet(UP, DOWN, seqs_protospacer, seqs_down, seqs_up, seqs_pam, crispron, epigeneticDic)
     modeli = leenay_Model()
     modeli.fit(data, labels, epochs=25, batch_size=16, verbose=1, sample_weight=weights)
-    modeli.save("CRISPRepi_model.keras")
+    modeli.save("EpiCRISPR_model.keras")
 
 
 if __name__ == '__main__':
