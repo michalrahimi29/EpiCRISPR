@@ -28,8 +28,12 @@ For training and evaluating the model on the Leenay et al. dataset with CRISPROn
 python run.py 1 True all
 ```
 ### Model evaluation on other human cell types:
-For evaluating the model on the human cell types- HEK293, HCT116, K562 and T cell: First input should be 2, afterward for adding CRISPROn's score predictions the second input shold be True else False, the third input should be the wanted cell type and last give the epigenetic markers you would like to use, if you desire to use all avalible epigenetic markers the third input should be 'all'. For evaluation on other human cell type only the following epigenetic markers are available: chromatin, CTCF, H3K4me1, H3K27ac, H3K36me3. 
+For evaluating the model on other human cell types (HEK293, HCT116, K562, and T cell):
 
+1. The first input should be 2.
+2. The second input should be the desired cell type.
+3. For adding CRISPROn's score predictions, the second input should be True; otherwise, False.
+4. Specify the epigenetic markers you would like to use. If you wish to use all available epigenetic markers, the fourth input should be all. For evaluation on other human cell types, the following epigenetic markers are available: chromatin, CTCF, H3K4me1, H3K27ac, and H3K36me3.
 
 For training the model on the Leenay et al. dataset and evaluating on K562 without CRISPROn scores and with all epigenetic markers:
 ```python
